@@ -1,6 +1,6 @@
-# OCR & GPT Info Extraction 🖼️🤖
+# OCR & GPT Business Card Scanner 🖼️
 
-This repository contains a project that combines **Azure's OCR API** and **OpenAI's GPT model** to extract and process text from images. The extracted text is parsed to identify key information, including:  
+This repository contains a project that combines **Azure's OCR API** and **OpenAI's GPT model** to extract and process text from business cards. The extracted text is parsed to identify key information, including:  
 - **Name**  
 - **Title**  
 - **Company**  
