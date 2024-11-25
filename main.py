@@ -9,12 +9,6 @@ load_dotenv()
 subscription_key = os.getenv('AZURE_KEY')
 endpoint = os.getenv('AZURE_ENDPOINT')
 image_path = os.getenv('IMAGE_PATH')
-
-# Azure credentials
-load_dotenv()
-subscription_key = os.getenv('AZURE_KEY')
-endpoint = os.getenv('AZURE_ENDPOINT')
-image_path = os.getenv('IMAGE_PATH')
 openai_api_key = os.getenv('OPENAI_API_KEY')
 
 # Validate environment variables
