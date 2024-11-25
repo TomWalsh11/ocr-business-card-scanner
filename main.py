@@ -4,17 +4,25 @@ from dotenv import load_dotenv
 from openai import OpenAI
 import os
 
+# Load environment variables
+load_dotenv()
+subscription_key = os.getenv('AZURE_KEY')
+endpoint = os.getenv('AZURE_ENDPOINT')
+image_path = os.getenv('IMAGE_PATH')
+
 # Azure credentials
 load_dotenv()
 subscription_key = os.getenv('AZURE_KEY')
 endpoint = os.getenv('AZURE_ENDPOINT')
-print(subscription_key)
-print(endpoint)
+image_path = os.getenv('IMAGE_PATH')
+openai_api_key = os.getenv('OPENAI_API_KEY')
+
+# Validate environment variables
+if not all([subscription_key, endpoint, image_path, openai_api_key]):
+    raise ValueError("Missing one or more required environment variables. Please check your .env file.")
+                     
 # Authenticate the client
 client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
-
-# Path to your image
-image_path = os.getenv('IMAGE_PATH')
 
 # Open the image file
 with open(image_path, "rb") as image_stream:
@@ -30,7 +38,7 @@ extracted_text = "\n".join(
 print(extracted_text)
 
 # OpenAI API key
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+client = OpenAI(api_key=openai_api_key)
 
 # Function to parse the extracted OCR text using OpenAI's GPT model
 def extract_info(text):
