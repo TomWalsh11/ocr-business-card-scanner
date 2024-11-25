@@ -36,7 +36,7 @@ client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 def extract_info(text):
     # Query OpenAI API with the provided text using gpt-3.5-turbo-instruct model
     response = client.completions.create(
-        model="gpt-3.5-turbo-instruct",  # Use gpt-3.5-turbo-instruct model
+        model="gpt-3.5-turbo-instruct",
         prompt = f"""
         Extract the following fields from the text below: 
         - Name
