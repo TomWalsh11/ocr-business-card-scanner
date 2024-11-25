@@ -16,6 +16,7 @@ This repository contains a project that combines **Azure's OCR API** and **OpenA
 - **`.gitignore`**: Specifies files and directories to be ignored by Git (e.g., `.env` and other sensitive files).
 - **`contact.jpg`**: Example image file used for testing the OCR functionality.
 - **`LICENSE`**: MIT license for the project.
+- **`requirements.txt`**: Specifies the dependencies required to run the project.
 
 ---
 
@@ -38,10 +39,16 @@ This repository contains a project that combines **Azure's OCR API** and **OpenA
 1. Clone the repository:  
 
    ```bash
-   git clone https://github.com/yourusername/ocr-gpt-project.git
+   git clone https://github.com/TomWalsh11/ocr-business-card-scanner.git
    cd ocr-gpt-project
 
-2. Create a .env file with your credentials:
+2. Install the required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   
+3. Create a .env file with your credentials:
+
    ```bash
    AZURE_KEY=your_azure_subscription_key
    AZURE_ENDPOINT=your_azure_endpoint
@@ -51,13 +58,16 @@ This repository contains a project that combines **Azure's OCR API** and **OpenA
 ---
 
 ## ▶️ Usage
+
 1. Add your image file path to the `IMAGE_PATH` variable in `.env`.
 
 2. Run the script:
+   
    ```bash
    python main.py
 
 3. View the extracted information in the console:
+
    ```bash
    Name: [extracted_name]
    Title: [extracted_title]
@@ -68,6 +78,7 @@ This repository contains a project that combines **Azure's OCR API** and **OpenA
 ---
 
 ## 🔧 Customization
+
 - Modify the prompt in the `extract_info` function to adjust how the GPT model parses the text.
 - Change the image file dynamically by updating the `IMAGE_PATH` in the `.env` file.
 
