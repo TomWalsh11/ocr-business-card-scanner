@@ -5,7 +5,7 @@ from openai import OpenAI
 import os
 
 # Load environment variables
-load_dotenv()
+load_dotenv(override=True)
 subscription_key = os.getenv('AZURE_KEY')
 endpoint = os.getenv('AZURE_ENDPOINT')
 image_path = os.getenv('IMAGE_PATH')

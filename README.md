@@ -11,7 +11,7 @@ This repository contains a project that combines **Azure's OCR API** and **OpenA
 
 ## 📂 Repo Structure
 
-- **`main.py`**: Main script that processes images and extracts information.
+- **`main.py`**: Main script that processes images and extracts relevant information.
 - **`.env`**: Stores environment variables required for Azure OCR and OpenAI GPT APIs.
 - **`.gitignore`**: Specifies files and directories to be ignored by Git (e.g., `.env` and other sensitive files).
 - **`contact.jpg`**: Example image file used for testing the OCR functionality.
